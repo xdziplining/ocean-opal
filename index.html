@@ -1,1 +1,39 @@
-Prototype is being developed.
+<html>
+
+<head>
+</head>
+
+<body>
+  <div style="text-align: center"><button id="protoButton"><h1>Launch Prototype</h1></button></div>
+  <div style="text-align: center"><a href="https://playcode.io/2267631"><button><h2>View Prototype Code</h2></button>
+  <script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://i-dont-know-why-chatgpt-required-a-url-to-be-here-like.wtf/man"; // Original URL, kept for reference
+
+    document.getElementById('protoButton').onclick = function() {
+      // Create a new window or focus on it if it exists
+      var win = window.open('', '_blank'); // Empty string for a new, blank window
+
+      if (win) {
+        // Build the HTML content for the new window
+        var htmlContent = `
+<h1>boing</h1>
+        `;
+
+        // Write the HTML content to the new window's document
+        win.document.open();
+        win.document.write(htmlContent);
+        win.document.close();
+
+        // Optional: Focus the new window
+        win.focus();
+
+      } else {
+        // Handle cases where pop-ups are blocked
+        alert("Please allow pop-ups. >_<");
+      }
+    };
+  </script>
+</body>
+
+</html>
